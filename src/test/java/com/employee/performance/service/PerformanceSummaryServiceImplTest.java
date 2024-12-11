@@ -1,17 +1,24 @@
 package com.employee.performance.service;
 
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.mockito.Mockito.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
-import java.time.LocalDateTime;
 import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.employee.performance.dto.EmployeeSelfReviewDTO;
 import com.employee.performance.dto.ManagerReviewDTO;
@@ -25,6 +32,8 @@ import com.employee.performance.repository.ManagerReviewRepository;
 import com.employee.performance.repository.PerformanceSummaryRepository;
 import com.employee.performance.service.impl.PerformanceSummaryServiceImpl;
 
+@ExtendWith(MockitoExtension.class)
+@ActiveProfiles("test")
 public class PerformanceSummaryServiceImplTest {
 
     @Mock
