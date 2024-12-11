@@ -12,19 +12,28 @@ public class Employee {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long employee_id;
+    private Long employeeId;
     private String employeeName;
-	public Long getEmployee_id() {
-		return employee_id;
+    private String position;
+
+    
+	public Long getEmployeeId() {
+		return employeeId;
 	}
-	public void setEmployee_id(Long employee_id) {
-		this.employee_id = employee_id;
+	public void setEmployeeId(Long employeeId) {
+		this.employeeId = employeeId;
 	}
 	public String getEmployeeName() {
 		return employeeName;
 	}
 	public void setEmployeeName(String employeeName) {
 		this.employeeName = employeeName;
+	}
+	public String getPosition() {
+		return position;
+	}
+	public void setPosition(String position) {
+		this.position = position;
 	}
     
 }

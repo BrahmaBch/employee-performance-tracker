@@ -10,7 +10,7 @@ import com.employee.performance.entity.ManagerReview;
 @Repository
 public interface ManagerReviewRepository extends JpaRepository<ManagerReview, Long> {
 
-	@Query("SELECT mr FROM ManagerReview mr WHERE mr.employee.employee_id = :employeeId")
+	@Query("SELECT mr FROM ManagerReview mr WHERE mr.employee.employeeId = :employeeId")
     ManagerReview findByEmployeeId(@Param("employeeId") Long employeeId);
-
+	
 }

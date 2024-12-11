@@ -23,7 +23,8 @@ public class ManagerReview {
     private Employee employee;
 
     private String reviewText;
-    private int rating;  // Rating between 1 and 5
+    private int rating;
+    private double managerWeight;
     private LocalDateTime submittedAt;
     
 	public Long getManagerReviewId() {
@@ -49,6 +50,12 @@ public class ManagerReview {
 	}
 	public void setRating(int rating) {
 		this.rating = rating;
+	}
+	public double getManagerWeight() {
+		return managerWeight;
+	}
+	public void setManagerWeight(double managerWeight) {
+		this.managerWeight = managerWeight;
 	}
 	public LocalDateTime getSubmittedAt() {
 		return submittedAt;

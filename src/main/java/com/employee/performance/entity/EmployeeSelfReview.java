@@ -21,7 +21,6 @@ public class EmployeeSelfReview {
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
-
     private String reviewText;
     private LocalDateTime submittedAt;
 	public Long getSelfReviewId() {
