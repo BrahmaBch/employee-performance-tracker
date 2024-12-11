@@ -15,10 +15,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.employee.performance.dto.EmployeeSelfReviewDTO;
 import com.employee.performance.dto.ManagerReviewDTO;
@@ -32,20 +32,21 @@ import com.employee.performance.repository.ManagerReviewRepository;
 import com.employee.performance.repository.PerformanceSummaryRepository;
 import com.employee.performance.service.impl.PerformanceSummaryServiceImpl;
 
-@ExtendWith(MockitoExtension.class)
+
+@ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
 public class PerformanceSummaryServiceImplTest {
 
-    @Mock
+	@MockBean
     private EmployeeSelfReviewRepository selfReviewRepository;
 
-    @Mock
+    @MockBean
     private ManagerReviewRepository managerReviewRepository;
 
-    @Mock
+    @MockBean
     private PerformanceSummaryRepository performanceSummaryRepository;
 
-    @Mock
+    @MockBean
     private EmployeeRepository employeeRepository;
 
     @InjectMocks

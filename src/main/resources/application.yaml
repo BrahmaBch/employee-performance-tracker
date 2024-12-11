@@ -3,9 +3,11 @@ server:
 
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL}  
-    username: ${SPRING_DATASOURCE_USERNAME}  
-    password: ${SPRING_DATASOURCE_PASSWORD} 
+    url: ${DATABASE_URL}
+    #DATABASE_URL=jdbc:postgresql://localhost:5432/config-db  
+    #DATABASE_PASSWORD=bcb@1234 
+    username: postgres  
+    password: ${DATABASE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
