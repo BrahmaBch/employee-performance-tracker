@@ -15,8 +15,14 @@ public class Employee {
     private Long employeeId;
     private String employeeName;
     private String position;
-
     
+	public Employee() {
+	}
+	public Employee(Long employeeId, String employeeName, String position) {
+		this.employeeId = employeeId;
+		this.employeeName = employeeName;
+		this.position = position;
+	}
 	public Long getEmployeeId() {
 		return employeeId;
 	}

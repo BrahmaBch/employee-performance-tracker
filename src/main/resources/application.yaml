@@ -3,11 +3,12 @@ server:
 
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL}  
-    username: ${SPRING_DATASOURCE_USERNAME}  
-    password: ${SPRING_DATASOURCE_PASSWORD} 
+    url: ${SPRING_DATASOURCE_URL}
+    #jdbc:postgresql://pg-demo-db.c3uyeig4my21.ap-south-1.rds.amazonaws.com:5432/employeedb
+    username: postgres
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    
     driver-class-name: org.postgresql.Driver
-
   jpa:
     hibernate:
       ddl-auto: update 
@@ -15,3 +16,8 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect  
+        
+    
+#SPRING_DATASOURCE_PASSWORD=bcb@1234 /Deadpool2024BBH
+#SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/employee_db
+#SPRING_DATASOURCE_USERNAME=postgres

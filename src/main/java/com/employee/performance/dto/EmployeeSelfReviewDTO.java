@@ -8,6 +8,7 @@ public class EmployeeSelfReviewDTO {
     private Long employeeId;
     private String reviewText;
     private LocalDateTime submittedAt;
+    
 	public Long getSelfReviewId() {
 		return selfReviewId;
 	}
