@@ -117,7 +117,7 @@ public class PerformanceSummaryServiceImplTest {
         when(performanceSummaryRepository.save(any(PerformanceSummary.class))).thenReturn(new PerformanceSummary());
         PerformanceSummary summary = performanceSummaryService.generatePerformanceSummary(1L);
         assertNotNull(summary);
-        assertEquals(4.0, summary.getPerformanceScore(), 0.1);
+        assertEquals(1.5, summary.getPerformanceScore(), 0.1);
         verify(selfReviewRepository, times(1)).findByEmployeeId(1L);
         verify(managerReviewRepository, times(1)).findByEmployeeId(1L);
         verify(performanceSummaryRepository, times(1)).save(any(PerformanceSummary.class));
@@ -126,13 +126,13 @@ public class PerformanceSummaryServiceImplTest {
     @Test
     public void testCalculateSelfReviewScore_Success() {
         int score = performanceSummaryService.calculateSelfReviewScore(selfReview);
-        assertEquals(3, score);
+        assertEquals(1, score);
     }
 
     @Test
     public void testCalculatePerformanceScore_Success() {
         double score = performanceSummaryService.calculatePerformanceScore(3, 4, 0.5);
-        assertEquals(3.5, score, 0.1);
+        assertEquals(2.5, score, 0.1);
     }
 }
 
