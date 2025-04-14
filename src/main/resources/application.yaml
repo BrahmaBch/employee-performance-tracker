@@ -20,5 +20,3 @@ spring:
 #SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/employee_db
 #SPRING_DATASOURCE_USERNAME=postgres
 # Employee performance traking app
-
-# revert example
